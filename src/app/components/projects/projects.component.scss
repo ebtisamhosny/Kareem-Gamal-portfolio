@@ -1,0 +1,71 @@
+:host ::ng-deep #projects {
+  background: linear-gradient(180deg, #100640, var(--bg));
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-10px);
+    border-color: var(--c4);
+    box-shadow: 0 20px 50px rgba(38, 28, 193, 0.4);
+  }
+}
+
+.project-banner {
+  height: 110px;
+  background: linear-gradient(135deg, var(--c1), var(--c2), var(--c3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  color: var(--c4);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(241, 255, 94, 0.2), transparent);
+  }
+}
+
+.project-body {
+  padding: 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  h3 { color: var(--c4); font-size: 17px; margin-bottom: 8px; }
+  p { color: var(--muted); font-size: 14px; flex: 1; }
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+
+  span {
+    background: rgba(58, 154, 255, 0.15);
+    color: var(--c3);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+}

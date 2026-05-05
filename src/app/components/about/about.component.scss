@@ -1,0 +1,61 @@
+:host ::ng-deep #about {
+  background: linear-gradient(180deg, var(--bg), #100640);
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--c2), var(--c3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  color: var(--c4);
+  box-shadow: 0 20px 60px rgba(38, 28, 193, 0.4);
+  border: 3px solid var(--c4);
+}
+
+.about-text {
+  h3 {
+    font-size: 26px;
+    color: var(--c4);
+    margin-bottom: 15px;
+  }
+  p {
+    color: var(--muted);
+    margin-bottom: 15px;
+    font-size: 16px;
+    b { color: var(--c4); }
+  }
+}
+
+.about-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+
+  div {
+    padding: 10px 14px;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    font-size: 14px;
+    b { color: var(--c3); }
+  }
+}
+
+@media (max-width: 900px) {
+  .about-wrapper { grid-template-columns: 1fr; gap: 30px; }
+  .about-img { max-width: 250px; margin: 0 auto; }
+}

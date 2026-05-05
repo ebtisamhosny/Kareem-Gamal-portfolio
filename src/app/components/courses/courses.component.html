@@ -1,0 +1,12 @@
+<section id="courses">
+  <h2 class="section-title reveal">Courses &amp; Certifications</h2>
+  <p class="section-subtitle reveal">Continuous learning journey</p>
+  <div class="courses-grid">
+    <div class="course-card reveal" *ngFor="let course of courses">
+      <div class="icon"><i [class]="course.icon"></i></div>
+      <h3>{{ course.title }}</h3>
+      <div class="provider">{{ course.provider }}</div>
+      <div class="date"><i class="far fa-calendar"></i> {{ course.date }}</div>
+    </div>
+  </div>
+</section>

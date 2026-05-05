@@ -1,0 +1,74 @@
+:host ::ng-deep nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(13, 5, 48, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(58, 154, 255, 0.2);
+  padding: 16px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--c4);
+  letter-spacing: 1px;
+  span { color: var(--c3); }
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+
+  li a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    transition: color 0.3s;
+
+    &:hover, &.active { color: var(--c4); }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--c4);
+      transition: width 0.3s;
+    }
+    &:hover::after, &.active::after { width: 100%; }
+  }
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: var(--c4);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .menu-toggle { display: block; }
+  ul {
+    position: fixed;
+    top: 65px; left: 0; right: 0;
+    background: rgba(13, 5, 48, 0.98);
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 0;
+    transform: translateY(-150%);
+    transition: transform 0.4s;
+    &.open { transform: translateY(0); }
+    li { width: 100%; text-align: center; padding: 14px 0; }
+  }
+}

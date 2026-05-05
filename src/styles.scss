@@ -1,0 +1,97 @@
+/* ===== Global theme variables (color palette from colorhunt.co) ===== */
+:root {
+  --c1: #1C0770;
+  --c2: #261CC1;
+  --c3: #3A9AFF;
+  --c4: #F1FF5E;
+  --bg: #0d0530;
+  --text: #ffffff;
+  --muted: #c9c8e8;
+  --card: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(58, 154, 255, 0.25);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 110px 8% 80px;
+  min-height: 100vh;
+}
+
+.section-title {
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, var(--c3), var(--c4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn {
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
+}
+.btn-primary {
+  background: var(--c4);
+  color: var(--c1);
+}
+.btn-primary:hover {
+  background: var(--c3);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(58, 154, 255, 0.4);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--c4);
+  border: 2px solid var(--c4);
+}
+.btn-outline:hover {
+  background: var(--c4);
+  color: var(--c1);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+  section { padding: 100px 6% 60px; }
+  .section-title { font-size: 30px; }
+}

@@ -1,0 +1,12 @@
+<section id="skills">
+  <h2 class="section-title reveal">Skills</h2>
+  <p class="section-subtitle reveal">Tools and technologies I work with</p>
+  <div class="skills-grid">
+    <div class="skill-card reveal" *ngFor="let group of groups">
+      <h3><i [class]="group.icon"></i> {{ group.title }}</h3>
+      <div class="skill-tags">
+        <span class="skill-tag" *ngFor="let item of group.items">{{ item }}</span>
+      </div>
+    </div>
+  </div>
+</section>

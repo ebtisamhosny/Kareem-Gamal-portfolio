@@ -1,0 +1,16 @@
+<section id="projects">
+  <h2 class="section-title reveal">Projects</h2>
+  <p class="section-subtitle reveal">Selected academic &amp; technical work</p>
+  <div class="projects-grid">
+    <div class="project-card reveal" *ngFor="let project of projects">
+      <div class="project-banner"><i [class]="project.icon"></i></div>
+      <div class="project-body">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+        <div class="project-tags">
+          <span *ngFor="let tag of project.tags">{{ tag }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

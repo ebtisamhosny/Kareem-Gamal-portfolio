@@ -1,0 +1,39 @@
+:host ::ng-deep #courses {
+  background: linear-gradient(180deg, #100640, var(--bg));
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 22px;
+  border-left: 4px solid var(--c4);
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    background: rgba(58, 154, 255, 0.08);
+  }
+
+  .icon {
+    width: 45px; height: 45px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--c2), var(--c3));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--c4);
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  h3 { color: #fff; font-size: 17px; margin-bottom: 6px; }
+  .provider { color: var(--c3); font-size: 13px; font-weight: 500; }
+  .date { color: var(--muted); font-size: 12px; margin-top: 6px; }
+}

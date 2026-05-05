@@ -1,0 +1,13 @@
+<section id="experience">
+  <h2 class="section-title reveal">Experience</h2>
+  <p class="section-subtitle reveal">Volunteering &amp; community contributions</p>
+  <div class="timeline">
+    <div class="timeline-item reveal" *ngFor="let item of items">
+      <div class="timeline-card">
+        <h3>{{ item.title }}</h3>
+        <div class="role"><i class="fas fa-hands-helping"></i> {{ item.role }}</div>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

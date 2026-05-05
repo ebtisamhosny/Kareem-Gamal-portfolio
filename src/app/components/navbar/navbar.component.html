@@ -1,0 +1,11 @@
+<nav>
+  <div class="logo">Kareem<span>.</span></div>
+  <ul [class.open]="isOpen">
+    <li *ngFor="let link of links; let i = index">
+      <a [href]="'#' + link.id" [class.active]="i === 0" (click)="closeMenu()">{{ link.label }}</a>
+    </li>
+  </ul>
+  <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+    <i class="fas fa-bars"></i>
+  </button>
+</nav>
