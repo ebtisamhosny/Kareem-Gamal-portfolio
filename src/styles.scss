@@ -1,9 +1,9 @@
 /* ===== Global theme variables (color palette from colorhunt.co) ===== */
 :root {
-  --c1: #1C0770;
-  --c2: #261CC1;
-  --c3: #3A9AFF;
-  --c4: #F1FF5E;
+  --c1: #1C0770;   /* dark purple */
+  --c2: #261CC1;   /* royal blue */
+  --c3: #3A9AFF;   /* light blue */
+  --c4: #F1FF5E;   /* yellow accent */
   --bg: #0d0530;
   --text: #ffffff;
   --muted: #c9c8e8;
@@ -23,6 +23,7 @@ body {
   overflow-x: hidden;
 }
 
+/* ===== Common section styles ===== */
 section {
   padding: 110px 8% 80px;
   min-height: 100vh;
@@ -46,6 +47,7 @@ section {
   font-size: 16px;
 }
 
+/* ===== Reveal-on-scroll animation ===== */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -56,6 +58,7 @@ section {
   transform: translateY(0);
 }
 
+/* ===== Buttons ===== */
 .btn {
   padding: 13px 30px;
   border-radius: 50px;
@@ -91,6 +94,7 @@ section {
   transform: translateY(-3px);
 }
 
+/* Generic responsive helper */
 @media (max-width: 900px) {
   section { padding: 100px 6% 60px; }
   .section-title { font-size: 30px; }

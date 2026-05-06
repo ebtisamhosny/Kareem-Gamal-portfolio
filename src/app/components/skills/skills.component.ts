@@ -16,8 +16,20 @@ interface SkillGroup {
 })
 export class SkillsComponent {
   groups: SkillGroup[] = [
-    { title: 'Languages', icon: 'fas fa-code', items: ['C++', 'Python', 'Verilog'] },
-    { title: 'Tools', icon: 'fas fa-tools', items: ['Cadence Virtuoso', 'Xschem', 'ADT', 'MATLAB', 'LTspice', 'Logisim', 'LabVIEW', 'Modelsim', 'Quartus'] },
-    { title: 'Domains', icon: 'fas fa-microchip', items: ['Analog IC Design', 'Mixed-Signal Design', 'Circuit Simulation', 'Semiconductor Fundamentals'] }
+    {
+      title: 'Languages',
+      icon: 'fas fa-code',
+      items: ['C++', 'Python', 'Verilog']
+    },
+    {
+      title: 'Tools',
+      icon: 'fas fa-tools',
+      items: ['Cadence Virtuoso', 'Xschem', 'ADT', 'MATLAB', 'LTspice', 'Logisim', 'LabVIEW', 'Modelsim', 'Quartus']
+    },
+    {
+      title: 'Domains',
+      icon: 'fas fa-microchip',
+      items: ['Analog IC Design', 'Mixed-Signal Design', 'Circuit Simulation', 'Semiconductor Fundamentals']
+    }
   ];
 }

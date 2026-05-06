@@ -21,6 +21,11 @@ export class NavbarComponent {
     { id: 'contact', label: 'Contact' }
   ];
 
-  toggleMenu(): void { this.isOpen = !this.isOpen; }
-  closeMenu(): void { this.isOpen = false; }
+  toggleMenu(): void {
+    this.isOpen = !this.isOpen;
+  }
+
+  closeMenu(): void {
+    this.isOpen = false;
+  }
 }

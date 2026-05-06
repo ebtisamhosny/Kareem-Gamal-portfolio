@@ -21,7 +21,9 @@ export class CoverComponent implements AfterViewInit, OnDestroy {
   private deleting = false;
   private timer: any;
 
-  ngAfterViewInit(): void { this.typeLoop(); }
+  ngAfterViewInit(): void {
+    this.typeLoop();
+  }
 
   ngOnDestroy(): void {
     if (this.timer) clearTimeout(this.timer);

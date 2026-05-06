@@ -32,6 +32,7 @@ export class AppComponent implements AfterViewInit {
   title = 'Kareem Portfolio';
 
   ngAfterViewInit(): void {
+    // Reveal on scroll
     const reveals = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -40,6 +41,7 @@ export class AppComponent implements AfterViewInit {
     }, { threshold: 0.12 });
     reveals.forEach(r => io.observe(r));
 
+    // Active link on scroll
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
     window.addEventListener('scroll', () => {
